@@ -1,0 +1,68 @@
+name: Import portfolio assets
+on:
+  push:
+    paths: ['.github/workflows/import-assets.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import images and PDF from the existing public portfolio
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --fail --location --retry 3 --output 'assets/page-13.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-13.webp'
+          curl --fail --location --retry 3 --output 'assets/page-12.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-12.webp'
+          curl --fail --location --retry 3 --output 'assets/page-20.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-20.webp'
+          curl --fail --location --retry 3 --output 'assets/page-16.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-16.webp'
+          curl --fail --location --retry 3 --output 'assets/page-9.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-9.webp'
+          curl --fail --location --retry 3 --output 'assets/page-28.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-28.webp'
+          curl --fail --location --retry 3 --output 'assets/sketch.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/sketch.webp'
+          curl --fail --location --retry 3 --output 'assets/page-23.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-23.webp'
+          curl --fail --location --retry 3 --output 'assets/page-24.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-24.webp'
+          curl --fail --location --retry 3 --output 'assets/page-21.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-21.webp'
+          curl --fail --location --retry 3 --output 'assets/figuig.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/figuig.webp'
+          curl --fail --location --retry 3 --output 'assets/page-5.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-5.webp'
+          curl --fail --location --retry 3 --output 'assets/page-15.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-15.webp'
+          curl --fail --location --retry 3 --output 'assets/bank.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/bank.webp'
+          curl --fail --location --retry 3 --output 'assets/page-27.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-27.webp'
+          curl --fail --location --retry 3 --output 'assets/page-25.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-25.webp'
+          curl --fail --location --retry 3 --output 'assets/village.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/village.webp'
+          curl --fail --location --retry 3 --output 'assets/page-4.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-4.webp'
+          curl --fail --location --retry 3 --output 'assets/campus.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/campus.webp'
+          curl --fail --location --retry 3 --output 'assets/page-6.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-6.webp'
+          curl --fail --location --retry 3 --output 'assets/page-19.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-19.webp'
+          curl --fail --location --retry 3 --output 'assets/page-8.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-8.webp'
+          curl --fail --location --retry 3 --output 'assets/page-26.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-26.webp'
+          curl --fail --location --retry 3 --output 'assets/page-14.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-14.webp'
+          curl --fail --location --retry 3 --output 'assets/page-22.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-22.webp'
+          curl --fail --location --retry 3 --output 'assets/airport.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/airport.webp'
+          curl --fail --location --retry 3 --output 'assets/page-18.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-18.webp'
+          curl --fail --location --retry 3 --output 'assets/page-7.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-7.webp'
+          curl --fail --location --retry 3 --output 'assets/page-11.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-11.webp'
+          curl --fail --location --retry 3 --output 'assets/yassir-boukhdimi-portfolio.pdf' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/yassir-boukhdimi-portfolio.pdf'
+          curl --fail --location --retry 3 --output 'assets/page-10.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-10.webp'
+          curl --fail --location --retry 3 --output 'assets/page-3.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-3.webp'
+          curl --fail --location --retry 3 --output 'assets/page-17.webp' 'https://yassir-boukhdimi-architecture.grittyapple1.chatgpt.site/assets/page-17.webp'
+          python - <<'PY'
+          from pathlib import Path
+          for p in Path('assets').glob('*'):
+              data = p.read_bytes()
+              if p.suffix == '.webp':
+                  assert data[:4] == b'RIFF' and data[8:12] == b'WEBP', p
+              elif p.suffix == '.pdf':
+                  assert data.startswith(b'%PDF-'), p
+          PY
+      - name: Commit imported files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets
+          if ! git diff --cached --quiet; then
+            git commit -m "Import portfolio images and PDF"
+            git push
+          fi
